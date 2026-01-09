@@ -212,25 +212,50 @@
 <script src="boneage/js/script.js"></script>
 <center><font size="4"> Enter age and DOB to view images. <br>
 	
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-md-12">
-			<div class="row">
-				<div class="col-md-4">
-				</div>
-				<div class="col-md-4">
-					<p>
-						 <a href='https://www.counters-free.net/'>Hit Counters free</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=529081c3e81a06e752340035e03002fc0bf4c47a'></script>
-<script type="text/javascript" src="https://freevisitorcounters.com/en/home/counter/1478017/t/5"></script>
-					
-				</p>
-				</div>
-				<div class="col-md-4">
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vigilant Spork — Visit Counter</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; padding: 32px; text-align: center; }
+    .counter { font-size: 48px; font-weight: bold; margin-top: 12px; }
+    .label { color: #555; margin-top: 8px; }
+  </style>
+</head>
+<body>
+  <h1>Welcome to Vigilant Spork</h1>
+  <div class="label">Total site visits:</div>
+  <div class="counter" id="visitCount">…</div>
+
+  <script>
+    // CountAPI configuration for your site
+    const NAMESPACE = "creaturegoomba-vigilant-spork";
+    const KEY = "visits";
+
+    async function updateCounter() {
+      try {
+        const res = await fetch(
+          `https://api.countapi.xyz/hit/${encodeURIComponent(NAMESPACE)}/${encodeURIComponent(KEY)}`
+        );
+        const data = await res.json();
+        document.getElementById("visitCount").textContent = data.value.toLocaleString();
+      } catch (err) {
+        document.getElementById("visitCount").textContent = "Error";
+        console.error(err);
+      }
+    }
+
+    updateCounter();
+  </script>
+</body>
+</html>
+
+    bumpCounter();
+  </script>
+</body>
+</html>
 
 	
 			

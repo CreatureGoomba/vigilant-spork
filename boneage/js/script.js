@@ -915,6 +915,7 @@ $(document).ready(function() {
 			//$('#wrap').popover.hide();
 			//$('#wrap').popover('show');
 		//}
+		var junkvar = 0;
 	});
 
 	boneage.poHide = function() {

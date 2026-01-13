@@ -661,26 +661,36 @@ $(document).ready(function() {
 
 		boneage.report =
 			'<b>FINDINGS:</b><br>' +
-			'Sex: ' + pt.sex + '<br>' +
-			'Study Date: ' + ref.today + '<br>' +
-			'Date of Birth: ' + pt.DOB + '<br>' +
-			'Chronological Age: ' + strMtoY(pt.age) + '<br>' +
-			'<br>' +
-			'At the chronological age of ' + strMtoY(pt.age) +
-				', using the Brush Foundation data, the mean bone age for calculation is ' +
-				strMtoY(ref.age) +
-				'. Two standard deviations at this age is ' + 2*ref.stdev +
-				' months, giving a normal range of ' + strMtoY(ref.range.low) +
-				' to ' + strMtoY(ref.range.high) + ' (+/- 2 standard deviations).' + '<br>' +
-			'<br>' +
-			'By the method of Greulich and Pyle, the bone age is estimated to be ' +
-				strMtoY(pt.boneAge) + '.<br><br>' +
-			'<b>IMPRESSION:</b>' + '<br>' +
+			//'Sex: ' + pt.sex + '<br>' +
+			//'Study Date: ' + ref.today + '<br>' +
+			//'Date of Birth: ' + pt.DOB + '<br>' +
+			//'Chronological Age: ' + strMtoY(pt.age) + '<br>' +
+			//'<br>' +
+			//'At the chronological age of ' + strMtoY(pt.age) +
+			//	', using the Brush Foundation data, the mean bone age for calculation is ' +
+			//	strMtoY(ref.age) +
+			//	'. Two standard deviations at this age is ' + 2*ref.stdev +
+			//	' months, giving a normal range of ' + strMtoY(ref.range.low) +
+			//	' to ' + strMtoY(ref.range.high) + ' (+/- 2 standard deviations).' + '<br>' +
+			//'<br>' +
+			//'By the method of Greulich and Pyle, the bone age is estimated to be ' +
+			//	strMtoY(pt.boneAge) + '.<br><br>' +
+			//'<b>IMPRESSION:</b>' + '<br>' +
+			//'Chronological Age: ' + strMtoY(pt.age) + '<br>' +
+			//'Estimated Bone Age: ' + strMtoY(pt.boneAge) + '<br>' +
+			//'<br>' +
+			//'The estimated bone age is ' + ref.concl + '.';
+
 			'Chronological Age: ' + strMtoY(pt.age) + '<br>' +
 			'Estimated Bone Age: ' + strMtoY(pt.boneAge) + '<br>' +
 			'<br>' +
+			'Standard deviation at this age is ' + ref.stdev +
+			'<br>' +
+			'<br>' +
+			'<b>IMPRESSION:</b>' + '<br>' +
+			'<br>' +
 			'The estimated bone age is ' + ref.concl + '.';
-
+			
 		$('#taReport').html(boneage.report);
 	};
 

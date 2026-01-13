@@ -658,6 +658,7 @@ $(document).ready(function() {
 		pt.getBoneAge();
 		ref.getStDev();
 		boneage.setHint();
+		var popover = $('#wrap').data('bs.popover');
 
 		boneage.report =
 			'<b>FINDINGS:</b><br>' +
@@ -692,6 +693,12 @@ $(document).ready(function() {
 			'The estimated bone age is ' + ref.concl + '.';
 			
 		$('#taReport').html(boneage.report);
+
+		// if box is checked but popover is hidden ...
+		if ($('#cbHints').is(':checked') && !$("#wrap").next('div.popover:visible').length){
+			// ... then show popover
+			popover.show();
+		}
 	};
 
 	boneage.setHint = function() {

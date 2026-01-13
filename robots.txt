@@ -1,1 +1,2 @@
-Sitemap: https://kerbyradres.github.io/sitemap.xml
+User-agent: *
+Disallow: /

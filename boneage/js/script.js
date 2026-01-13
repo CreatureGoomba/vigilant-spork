@@ -658,7 +658,6 @@ $(document).ready(function() {
 		pt.getBoneAge();
 		ref.getStDev();
 		boneage.setHint();
-		var popover = $('#wrap').data('bs.popover');
 
 		boneage.report =
 			'<b>FINDINGS:</b><br>' +

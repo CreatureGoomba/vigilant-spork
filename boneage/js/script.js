@@ -693,12 +693,6 @@ $(document).ready(function() {
 			'The estimated bone age is ' + ref.concl + '.';
 			
 		$('#taReport').html(boneage.report);
-
-		// if box is checked but popover is hidden ...
-		if ($('#cbHints').is(':checked') && !$("#wrap").next('div.popover:visible').length){
-			// ... then show popover
-			popover.show();
-		}
 	};
 
 	boneage.setHint = function() {
@@ -914,9 +908,11 @@ $(document).ready(function() {
 
 	$('#cbHints').click(function() {
 		if ($('#cbHints').is(':checked')) {
-			$('#wrap').popover('show');
+			//$('#wrap').popover('show');
+			$('#wrap').popover.show();
 		} else {
-			$('#wrap').popover('hide');
+			//$('#wrap').popover('hide');
+			$('#wrap').popover.hide();
 		}
 	});
 

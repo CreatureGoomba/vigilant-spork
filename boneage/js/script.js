@@ -906,14 +906,14 @@ $(document).ready(function() {
 	});
 
 	$('#cbHints').click(function() {
-		if ($('#cbHints').is(':checked')) {
+		//if ($('#cbHints').is(':checked')) {
 			//$('#wrap').popover('show');
-			$('#wrap').popover.show();
-		} else {
+		//	$('#wrap').popover.show();
+		//} else {
 			//$('#wrap').popover('hide');
-			$('#wrap').popover.hide();
-		}
-		boneage.update();
+		//	$('#wrap').popover.hide();
+		//}
+		$('#wrap').popover.show();
 	});
 
 	boneage.poHide = function() {

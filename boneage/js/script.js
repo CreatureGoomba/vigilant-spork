@@ -915,7 +915,7 @@ $(document).ready(function() {
 			//$('#wrap').popover('hide');
 			//$('#wrap').popover.hide();
 			//$('#wrap').popover('show');
-					boneage.update();
+
 		}
 	});
 

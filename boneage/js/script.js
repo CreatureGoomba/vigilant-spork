@@ -913,6 +913,7 @@ $(document).ready(function() {
 			//$('#wrap').popover('hide');
 			$('#wrap').popover.hide();
 		}
+		boneage.update();
 	});
 
 	boneage.poHide = function() {

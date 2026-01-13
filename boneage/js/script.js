@@ -906,16 +906,15 @@ $(document).ready(function() {
 	});
 
 	$('#cbHints').change(function() {
-		//if ($('#cbHints').is(':checked')) {
+		if ($('#cbHints').is(':checked')) {
 		//	$('#wrap').popover('show');
 			//$('#wrap').popover.show();
 			//$('#wrap').popover('hide');
-		//} else {
+		} else {
 			//$('#wrap').popover('hide');
 			//$('#wrap').popover.hide();
 			//$('#wrap').popover('show');
-		//}
-		var junkvar = 1;
+		}
 	});
 
 	boneage.poHide = function() {

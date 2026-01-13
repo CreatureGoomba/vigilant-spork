@@ -910,10 +910,12 @@ $(document).ready(function() {
 		//	$('#wrap').popover('show');
 			//$('#wrap').popover.show();
 			//$('#wrap').popover('hide');
+					boneage.update();
 		} else {
 			//$('#wrap').popover('hide');
 			//$('#wrap').popover.hide();
 			//$('#wrap').popover('show');
+					boneage.update();
 		}
 	});
 

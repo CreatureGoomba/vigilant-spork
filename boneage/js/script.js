@@ -907,12 +907,13 @@ $(document).ready(function() {
 
 	$('#cbHints').change(function() {
 		if ($('#cbHints').prop('checked')) {
-			$('#wrap').popover('show');
-        	$('label[for="cbHints"]').text('Hints ON');
-			$('#cbTrouble').attr('checked', true)
+			//$('#wrap').popover('show');
+			$('#cbTrouble').prop('checked', true);
+			setTimeout(() => {
+            	$('#wrap').popover('show');
+        		}, 0);
 		} else {
 			$('#wrap').popover('hide');
-      		$('label[for="cbHints"]').text('Hints OFF');
 		}
 
 	});

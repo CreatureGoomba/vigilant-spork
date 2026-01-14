@@ -914,7 +914,7 @@ $(document).ready(function() {
 			$('#wrap').popover('hide');
       		$('label[for="cbHints"]').text('Hints OFF');
 		}
-		$('cbTrouble').attr('checked', true)
+		$('#cbTrouble').attr('checked', true)
 	});
 
 	boneage.poHide = function() {

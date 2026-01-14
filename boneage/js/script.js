@@ -908,13 +908,11 @@ $(document).ready(function() {
 	$('#cbHints').change(function() {
 		if ($('#cbHints').prop('checked')) {
 			$('#wrap').popover('show');
-			//$('#wrap').popover.show();
-			//$('#wrap').popover('hide');
+        	$('label[for="cbHints"]').text('Hints ON');
 
 		} else {
 			$('#wrap').popover('hide');
-			//$('#wrap').popover.hide();
-			//$('#wrap').popover('show');
+      		$('label[for="cbHints"]').text('Hints OFF');
 		}
 	});
 

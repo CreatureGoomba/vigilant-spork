@@ -909,9 +909,9 @@ $(document).ready(function() {
 		if ($('#cbHints').prop('checked')) {
 			//$('#wrap').popover('show');
 			$('#cbTrouble').prop('checked', true);
-			setTimeout(() => {
-            	$('#wrap').popover('show');
-        		}, 0);
+			$('#wrap')[0].offsetHeight; // force reflow
+			$('#wrap').popover('show');
+
 		} else {
 			$('#wrap').popover('hide');
 		}
@@ -920,7 +920,7 @@ $(document).ready(function() {
 
 	boneage.poHide = function() {
 		$('#wrap').popover('hide');
-		$('#cbHints').attr('checked', false);
+		$('#cbHints').prop('checked', false);
 	};
 
 	boneage.initHints();

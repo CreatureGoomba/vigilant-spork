@@ -906,7 +906,7 @@ $(document).ready(function() {
 	});
 
 	$('#cbHints').change(function() {
-		if ($('#cbHints').is(':checked')) {
+		if ($('#cbHints').prop('checked')) {
 			$('#wrap').popover('show');
 			//$('#wrap').popover.show();
 			//$('#wrap').popover('hide');

@@ -909,12 +909,12 @@ $(document).ready(function() {
 		if ($('#cbHints').prop('checked')) {
 			$('#wrap').popover('show');
         	$('label[for="cbHints"]').text('Hints ON');
-
+			$('#cbTrouble').attr('checked', true)
 		} else {
 			$('#wrap').popover('hide');
       		$('label[for="cbHints"]').text('Hints OFF');
 		}
-		$('#cbTrouble').attr('checked', true)
+
 	});
 
 	boneage.poHide = function() {

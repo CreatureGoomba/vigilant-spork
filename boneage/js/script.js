@@ -695,7 +695,8 @@ $(document).ready(function() {
 	};
 
 	boneage.setHint = function() {
-		var popover = $('#wrap').data('bs.popover');
+		//was #wrap
+		var popover = $('#cbHints').data('bs.popover');
 
 		if (pt.sex === 'male' || pt.sex === 'female') {
 			var index = ref[pt.sex].ages.indexOf(pt.boneAge);
@@ -706,7 +707,8 @@ $(document).ready(function() {
 		}
 
 		// if box is checked but popover is hidden ...
-		if ($('#cbHints').is(':checked') && !$("#wrap").next('div.popover:visible').length){
+		//was #wrap
+		if ($('#cbHints').is(':checked') && !$("#cbHints").next('div.popover:visible').length){
 			// ... then show popover
 			popover.show();
 		}
@@ -889,7 +891,8 @@ $(document).ready(function() {
 		boneage.reset();
 	});
 
-	$('#wrap').popover({
+	//was #wrap
+	$('#cbHints').popover({
 		'trigger': 'manual',
 		'placement': 'left',
 		'html': true,
@@ -909,17 +912,18 @@ $(document).ready(function() {
 		if ($('#cbHints').prop('checked')) {
 			//$('#wrap').popover('show');
 			$('#cbTrouble').prop('checked', true);
-			$('#wrap')[0].offsetHeight; // force reflow
-			$('#wrap').popover('show');
+			//was #wrap
+			$('#cbHints').popover('show');
 
 		} else {
-			$('#wrap').popover('hide');
+			$('#cbHints').popover('hide');
 		}
 
 	});
 
 	boneage.poHide = function() {
-		$('#wrap').popover('hide');
+		//was #wrap
+		$('#cbHints').popover('hide');
 		$('#cbHints').prop('checked', false);
 	};
 

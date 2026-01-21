@@ -684,7 +684,7 @@ $(document).ready(function() {
 			'Chronological Age: ' + strMtoY(pt.age) + '<br>' +
 			'Estimated Bone Age: ' + strMtoY(pt.boneAge) + '<br>' +
 			'<br>' +
-			'Standard deviation at this age is ' + ref.stdev + 'months.'
+			'Standard deviation at this age is ' + ref.stdev + ' months.' +
 			'<br>' +
 			'<br>' +
 			'<b>IMPRESSION:</b>' + '<br>' +

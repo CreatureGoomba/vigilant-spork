@@ -1,1 +1,2 @@
-Sitemap: http://boneage.ca/sitemap.xml
+User-agent: *
+Disallow: /

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <!--  Meta  -->
+  <title>My New Project!</title>
+	<link rel="canonical" href="http://boneage.ca" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--  Styles  -->
+	<link href="21766/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles/index.processed.css">
+  <!-- Scripts -->
+</head>
+<body>
+ <div class="h1 container">Pediatric Bone Age Calculator</div>
+	<div id="left" class="container">
+		<div id="divSex">
+			<label class="h5">Sex</label>
+			<br>
+			<button class="btn btn-lg btn-info" id="btnBoy">
+				&#9794; Boy
+			</button>
+			<button class="btn btn-lg btn-danger" id="btnGirl">
+				&#9792; Girl
+			</button>
+		</div>
+		<div id="divDOB">
+			<label class="h5" id="labelDOB">Date of Birth</label>
+			<div class="date-picker">
+				<div class="dpframe month">
+					<ul></ul>
+				</div>
+				<div class="dpframe day">
+					<ul></ul>
+				</div>
+				<div class="dpframe year">
+					<ul></ul>
+				</div>
+			</div>
+		</div>
+		<div id="divReport">
+			<label class="h5" id="labelReport">Report</label>
+			<div id="taReport" contenteditable="true">
+				An error has occurred.
+			</div>
+			<button class="btn btn-success" id="btnCopy" data-clipboard-target="#taReport">
+				<strong>Copy to Clipboard</strong>
+			</button>
+			<button class="btn btn-warning" id="btnReset">
+				<strong>Reset</strong>
+			</button>
+		</div>
+		<div>
+			<br>
+			<a id="references" data-toggle="modal" data-target="#modalRef">
+				<small>Adapted from Greulich and Pyle</small>
+			</a>
+		</div>
+		<!-- References modal -->
+		<div class="modal fade" id="modalRef" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button class="close" data-dismiss="modal">
+							<span aria-hidden="true">&times;</span>
+							<span class="sr-only">Close</span>
+						</button>
+						<h4 class="modal-title" id="myModalLabel">References</h4>
+					</div>
+					<div class="modal-body">
+						<ol>
+							<li>Greulich WW, Pyle SI. Radiographic atlas of skeletal development of the hand and wrist. 2nd ed. Stanford, Calif: Stanford
+								University Press, 1959.</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="right" class="container">
+		<div class="wrap noselect" id="wrap">
+			<h2 id="h2Instructions">
+				<ol>
+					<li>Select the child's sex</li>
+					<li>Input the date of birth</li>
+					<li>Identify the closest matching image</li>
+				</ol>
+			</h2>
+			<div class="frame" id="divBoy">
+				<ul class="slidee text-warning">
+					<li>
+						<img src="s.cdpn.io/21766/male_000.jpg">
+						<br>Newborn →</li>
+					<li>
+						<img src="s.cdpn.io/21766/male_003.jpg">
+						<br>← 3 months →</li>
+					<li>
+						<img src="s.cdpn.io/21766/male_006.jpg">
+						<br>← 6 months →</li>
+					<li>
+						<img src="s.cdpn.io/21766/male_009.jpg">
+						<br>← 9 months →</li>
+					<li>
+						<img src="s.cdpn.io/21766/male_012.jpg">
+						<br>← 12 months →</li>
+					<li>
+						<img src="s.cdpn.io/21766/male_015.jpg">
+						<br>← 15 months →</li>
+					<li>
+						<img src="s.cdpn.io/21766/male_018.jpg">
+						<br>← 18 months →</li>
+					<li>
+						<img src="s.cdpn.io/21766/male_024.jpg">
+						<br>← 2 years →</li>
+					<li>
+						<img src="s.cdpn.io/21766/male_032.jpg">
+						<br>← 2 years, 8 months →</li>
+					<li>
+						<img src="s.cdpn.io/21766/male_036.jpg">
+						<br>← 3 years →</li>
+					<li>
+						<img src="s.cdpn.io/21766/male_042.jpg">
+						<br>← 3 years, 6 months →</li>
+					<li>
+						<img src="s.cdpn.io/21766/male_048.jpg">
+						<br>← 4 years →</li>
+					<li>
+						<img src="s.cdpn.io/21766/male_054.jpg">
+						<br>← 4 years, 6 months →</li>
+					<li>
+						<img src="s.cdpn.io/21766/male_060.jpg">
+						<br>← 5 years →</li>
+					<li>
+						<img src="s.cdpn.io/21766/male_072.jpg">
+						<br>← 6 years →</li>
+					<li>
+						<img src="s.cdpn.io/21766/male_084.jpg">
+						<br>← 7 years →</li>
+					<li>
+						<img src="s.cdpn.io/21766/male_096.jpg">
+						<br>← 8 years →</li>
+					<li>
+						<img src="s.cdpn.io/21766/male_108.jpg">
+						<br>← 9 years →</li>
+					<li>
+						<img src="s.cdpn.io/21766/male_120.jpg">
+						<br>← 10 years →</li>
+					<li>
+						<img src="s.cdpn.io/21766/male_132.jpg">
+						<br>← 11 years →</li>
+					<li>
+						<img src="s.cdpn.io/21766/male_138.jpg">
+						<br>← 11 years, 6 months →</li>
+					<li>
+						<img src="s.cdpn.io/21766/male_150.jpg">
+						<br>← 12 years, 6 months →</li>
+					<li>
+						<img src="s.cdpn.io/21766/male_156.jpg">
+						<br>← 13 years →</li>
+					<li>
+						<img src="s.cdpn.io/21766/male_162.jpg">
+						<br>← 13 years, 6 months →</li>
+					<li>
+						<img src="s.cdpn.io/21766/male_168.jpg">
+						<br>← 14 years →</li>
+					<li>
+						<img src="s.cdpn.io/21766/male_180.jpg">
+						<br>← 15 years →</li>
+					<li>
+						<img src="s.cdpn.io/21766/male_186.jpg">
+						<br>← 15 years, 6 months →</li>
+					<li>
+						<img src="s.cdpn.io/21766/male_192.jpg">
+						<br>← 16 years →</li>
+					<li>
+						<img src="s.cdpn.io/21766/male_204.jpg">
+						<br>← 17 years →</li>
+					<li>
+						<img src="s.cdpn.io/21766/male_216.jpg">
+						<br>← 18 years →</li>
+					<li>
+						<img src="s.cdpn.io/21766/male_228.jpg">
+						<br>← 19 years</li>
+				</ul>
+			</div>
+			<div class="frame" id="divGirl">
+				<ul class="slidee text-warning">
+					<li>
+						<img src="s.cdpn.io/21766/female_000.jpg">
+						<br>Newborn →</li>
+					<li>
+						<img src="s.cdpn.io/21766/female_003.jpg">
+						<br>← 3 months →</li>
+					<li>
+						<img src="s.cdpn.io/21766/female_006.jpg">
+						<br>← 6 months →</li>
+					<li>
+						<img src="s.cdpn.io/21766/female_009.jpg">
+						<br>← 9 months →</li>
+					<li>
+						<img src="s.cdpn.io/21766/female_012.jpg">
+						<br>← 12 months →</li>
+					<li>
+						<img src="s.cdpn.io/21766/female_015.jpg">
+						<br>← 15 months →</li>
+					<li>
+						<img src="s.cdpn.io/21766/female_018.jpg">
+						<br>← 18 months →</li>
+					<li>
+						<img src="s.cdpn.io/21766/female_024.jpg">
+						<br>← 2 years →</li>
+					<li>
+						<img src="s.cdpn.io/21766/female_030.jpg">
+						<br>← 2 years, 6 months →</li>
+					<li>
+						<img src="s.cdpn.io/21766/female_036.jpg">
+						<br>← 3 years →</li>
+					<li>
+						<img src="s.cdpn.io/21766/female_042.jpg">
+						<br>← 3 years, 6 months →</li>
+					<li>
+						<img src="s.cdpn.io/21766/female_050.jpg">
+						<br>← 4 years, 2 months →</li>
+					<li>
+						<img src="s.cdpn.io/21766/female_060.jpg">
+						<br>← 5 years →</li>
+					<li>
+						<img src="s.cdpn.io/21766/female_069.jpg">
+						<br>← 5 years, 9 months →</li>
+					<li>
+						<img src="s.cdpn.io/21766/female_082.jpg">
+						<br>← 6 years, 10 months →</li>
+					<li>
+						<img src="s.cdpn.io/21766/female_094.jpg">
+						<br>← 7 years, 10 months →</li>
+					<li>
+						<img src="s.cdpn.io/21766/female_106.jpg">
+						<br>← 8 years, 10 months →</li>
+					<li>
+						<img src="s.cdpn.io/21766/female_120.jpg">
+						<br>← 10 years →</li>
+					<li>
+						<img src="s.cdpn.io/21766/female_132.jpg">
+						<br>← 11 years →</li>
+					<li>
+						<img src="s.cdpn.io/21766/female_144.jpg">
+						<br>← 12 years →</li>
+					<li>
+						<img src="s.cdpn.io/21766/female_156.jpg">
+						<br>← 13 years →</li>
+					<li>
+						<img src="s.cdpn.io/21766/female_162.jpg">
+						<br>← 13 years, 6 months →</li>
+					<li>
+						<img src="s.cdpn.io/21766/female_168.jpg">
+						<br>← 14 years →</li>
+					<li>
+						<img src="s.cdpn.io/21766/female_180.jpg">
+						<br>← 15 years →</li>
+					<li>
+						<img src="s.cdpn.io/21766/female_192.jpg">
+						<br>← 16 years →</li>
+					<li>
+						<img src="s.cdpn.io/21766/female_204.jpg">
+						<br>← 17 years →</li>
+					<li>
+						<img src="s.cdpn.io/21766/female_216.jpg">
+						<br>← 18 years</li>
+				</ul>
+			</div>
+			<div id="prevnext">
+				<button class="btn btn-default btn-xs" id="prev">Prev</a>
+					<button class="btn btn-default btn-xs" id="next">Next</a>
+			</div>
+			<!-- common scrollbar, initiated uniquely for boys and girls -->
+			<div class="scrollbar" id="sbCommon">
+				<div class="handle"></div>
+			</div>
+		</div>
+		<div id="tooltip">
+			<label class="h4 noselect">
+				<input type="checkbox" id="cbHints">Hints</label>
+		</div>
+	</div>
+	<script src="ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="21766/bootstrap.min.js"></script>
+	<script src="21766/jquery.easing.1.3.js"></script>
+	<script src="s.cdpn.io/21766/clipboard.min.js"></script>
+	<script src="21766/sly.min.js"></script>
+  <script src="scripts/index.js"></script>
+<center><font size="2">This is a free demo result from the Wayback Machine Downloader. <a href="https://www.waybackmachinedownloads.com">Click here</a> to download the full version.</font></center></body>
+</html>

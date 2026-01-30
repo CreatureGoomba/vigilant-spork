@@ -972,7 +972,7 @@ $(document).ready(function() {
 			'<br>' +
 			'<b>IMPRESSION:</b>' + '<br>' +
 			'<br>' +
-			'The estimated bone age is ' + ref.concl + '.';
+			ref.concl + '.';
 
     
     $("#taReport").html(boneage.report);

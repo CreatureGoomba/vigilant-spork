@@ -918,52 +918,63 @@ $(document).ready(function() {
     boneage.setHint();
 
     boneage.report =
-      "<b>PROCEDURE PERFORMED:</b> BONE AGE STUDY<br><br>" +
-      "<b>COMPARISON:</b> [None].<br><br>" +
-      "<b>TECHNIQUE:</b> Single frontal view of the left hand.<br><br>" +
+     // "<b>PROCEDURE PERFORMED:</b> BONE AGE STUDY<br><br>" +
+     // "<b>COMPARISON:</b> [None].<br><br>" +
+     // "<b>TECHNIQUE:</b> Single frontal view of the left hand.<br><br>" +
       "<b>FINDINGS:</b><br>" +
-      "Sex: " +
-      pt.sex +
-      "<br>" +
-      "Study Date: " +
-      ref.today +
-      "<br>" +
-      "Date of Birth: " +
-      pt.DOB +
-      "<br>" +
-      "Chronological Age: " +
-      strMtoY(pt.age) +
-      "<br>" +
-      "<br>" +
-      "At the chronological age of " +
-      strMtoY(pt.age) +
-      ", using the Brush Foundation data, the mean bone age for calculation is " +
-      strMtoY(ref.age) +
-      ". Two standard deviations at this age is " +
-      2 * ref.stdev +
-      " months, giving a normal range of " +
-      strMtoY(ref.range.low) +
-      " to " +
-      strMtoY(ref.range.high) +
-      " (+/- 2 standard deviations)." +
-      "<br>" +
-      "<br>" +
-      "By the method of Greulich and Pyle, the bone age is estimated to be " +
-      strMtoY(pt.boneAge) +
-      ".<br><br>" +
-      "<b>CONCLUSION:</b>" +
-      "<br>" +
-      "Chronological Age: " +
-      strMtoY(pt.age) +
-      "<br>" +
-      "Estimated Bone Age: " +
-      strMtoY(pt.boneAge) +
-      "<br>" +
-      "<br>" +
-      "The estimated bone age is " +
-      ref.concl +
-      ".";
+     // "Sex: " +
+     // pt.sex +
+     // "<br>" +
+     // "Study Date: " +
+     // ref.today +
+      //"<br>" +
+     // "Date of Birth: " +
+     // pt.DOB +
+     // "<br>" +
+     // "Chronological Age: " +
+     // strMtoY(pt.age) +
+    // "<br>" +
+     // "<br>" +
+    //  "At the chronological age of " +
+     // strMtoY(pt.age) +
+     // ", using the Brush Foundation data, the mean bone age for calculation is " +
+     // strMtoY(ref.age) +
+     // ". Two standard deviations at this age is " +
+     // 2 * ref.stdev +
+     // " months, giving a normal range of " +
+     // strMtoY(ref.range.low) +
+     // " to " +
+     // strMtoY(ref.range.high) +
+     // " (+/- 2 standard deviations)." +
+     // "<br>" +
+     // "<br>" +
+     // "By the method of Greulich and Pyle, the bone age is estimated to be " +
+    // strMtoY(pt.boneAge) +
+     // ".<br><br>" +
+     // "<b>CONCLUSION:</b>" +
+      //"<br>" +
+     // "Chronological Age: " +
+     // strMtoY(pt.age) +
+     // "<br>" +
+     // "Estimated Bone Age: " +
+     // strMtoY(pt.boneAge) +
+     // "<br>" +
+     // "<br>" +
+     // "The estimated bone age is " +
+     // ref.concl +
+     // ".";
 
+			'Chronological Age: ' + strMtoY(pt.age) + '<br>' +
+			'Estimated Bone Age: ' + strMtoY(pt.boneAge) + '<br>' +
+			'<br>' +
+			'Standard deviation at this age is ' + ref.stdev +
+			'<br>' +
+			'<br>' +
+			'<b>IMPRESSION:</b>' + '<br>' +
+			'<br>' +
+			'The estimated bone age is ' + ref.concl + '.';
+
+    
     $("#taReport").html(boneage.report);
   };
 
@@ -1062,16 +1073,19 @@ $(document).ready(function() {
 
     if (pt.boneAge < ref.range.low) {
       ref.concl =
-        '<span class="text-primary"><strong>delayed</strong></span> (' +
-        ((pt.age - pt.boneAge) / ref.stdev).toFixed(1) +
-        " standard deviations below the mean)";
+        //'<span class="text-primary"><strong>delayed</strong></span> (' +
+        //((pt.age - pt.boneAge) / ref.stdev).toFixed(1) +
+        //" standard deviations below the mean)";
+        "Delayed bone age";
     } else if (pt.boneAge > ref.range.high) {
       ref.concl =
-        '<span class="text-primary"><strong>advanced</strong></span> (' +
-        ((pt.boneAge - pt.age) / ref.stdev).toFixed(1) +
-        " standard deviations above the mean)";
+        //'<span class="text-primary"><strong>advanced</strong></span> (' +
+        //((pt.boneAge - pt.age) / ref.stdev).toFixed(1) +
+        //" standard deviations above the mean)";
+        "Advanced bone age";
     } else {
-      ref.concl = "normal";
+      //ref.concl = "normal";
+      ref.concl = "Concordant bone age";
     }
   };
 
@@ -1110,17 +1124,17 @@ $(document).ready(function() {
     if (ageMonths === undef || isNaN(ageMonths)) {
       return undef;
     }
-    return ageMonths + " months";
-    // if (ageMonths < 24) {
-    //   return ageMonths + " months";
-    // } else {
-    //   return (
-    //     Math.floor(ageMonths / 12) +
-    //     " years, " +
-    //     Math.round(ageMonths % 12) +
-    //     " months"
-    //   );
-    // }
+    //return ageMonths + " months";
+     if (ageMonths < 24) {
+       return ageMonths + " months";
+     } else {
+       return (
+         Math.floor(ageMonths / 12) +
+         " years, " +
+         Math.round(ageMonths % 12) +
+         " months"
+       );
+     }
   }
 
   function slyInit(div) {

@@ -122,10 +122,12 @@ div.container {
   padding-bottom: 10px;
 }
 
+/*
 div#left {
   width: 33%;
   float: left;
 }
+*/
 
 #btnBoy, #btnGirl {
   border-style: solid;
@@ -155,10 +157,12 @@ div#left {
   font-weight: 400;
 }
 
+/*
 div#right {
   float: right;
   width: 67%;
 }
+*/
 
 #divBoy, #divGirl {
   font-weight: bold;

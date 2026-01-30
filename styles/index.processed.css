@@ -212,3 +212,14 @@ div#right {
 label {
   margin-top: 15px !important;
 }
+
+#divExtraReport {
+  background: white;
+  color: black;
+  width: 100%;
+  min-height: 15em;  /* adjust as needed */
+  padding: 5px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+}
+
